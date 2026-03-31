@@ -1,16 +1,18 @@
+
 ---
 layout:     post
-title:      "Hello 2015"
-subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-01-29 12:00:00
-author:     "Hux"
-header-img: "img/post-bg-2015.jpg"
-catalog: true
+title:      "2026年3月31日" #"这是文章大标题"
+subtitle:   "我在云南准备写博客"#"这是显示在标题下方的副标题文字"
+date:       2023-10-27 12:00:00
+author:     风神 #"Your Name"
+header-img: "img/post-bg-os-metro.jpg"  # 这里是背景图路径
+catalog:    true                       # 是否开启右侧目录
 tags:
-    - Meta
+    - 生活
+    - 随笔
 ---
 
-> “Yeah It's on. ”
+这里开始写你的正文内容...
 
 
 Hux 的 Blog 就这么开通了。
