@@ -2,16 +2,26 @@
 layout: page
 description: "「人生就是一场经历 一切都是过客」"
 ---
-#<style>
-    /* 直接针对这个类名，去掉冗长的父级路径 */
-    .intro-header .subheading {
-        font-size: 24px !important;
-        /* 注意：margin-top 对行内元素 span 有时失效，改用 padding-top 或 display */
-        display: block !important; 
-        padding-top: 220px !important; 
-        margin-top: 0 !important;
+<style>
+    .intro-header .site-heading h1 {
+        /* 优先调用衬线字体，营造古风/复古感 */
+        font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", "Georgia", serif !important;
+        font-size: 85px !important;      /* 复古风通常标题很大 */
+        color: #F5F5DC !important;      /* 米黄色/象牙白，比纯白更有复古感 */
+        font-weight: 700 !important;
+        letter-spacing: 8px !important;  /* 拉大字间距增加高级感 */
+        text-shadow: 3px 3px 0px rgba(0,0,0,0.2); /* 简单的重影效果 */
     }
-#</style>
+
+    .intro-header .subheading {
+        font-family: "Georgia", serif !important;
+        font-style: italic !important;   /* 副标题用意大利斜体增加复古味 */
+        font-size: 24px !important;
+        color: #CCCCCC !important;
+        margin-top: 220px !important;
+    }
+</style>
+
 
 
 {% for post in paginator.posts %}
