@@ -2,9 +2,12 @@
 layout: page
 description: "「人生就是一场经历 一切都是过客」"
 ---
-<span class="subheading" style="font-size: 30px; margin-top: 40px; text-align: center;">
-    {{ page.description }}
-</span>
+header .intro-header .site-heading .subheading {
+        font-size: 30px !important;    /* 强制修改字体大小 */
+        margin-top: 40px !important;  /* 增加向上间距，改变位置 */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 增加阴影让文字更清晰 */
+        line-height: 1.5;
+    }
 
 {% for post in paginator.posts %}
 <div class="post-preview">
