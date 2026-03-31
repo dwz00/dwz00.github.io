@@ -3,11 +3,16 @@ layout: page
 description: "「人生就是一场经历 一切都是过客」"
 ---
 <style>
-        header .intro-header .site-heading .subheading {
-        font-size: 30px !important;    /* 强制修改字体大小 */
-        margin-top: 150px !important;  /* 增加向上间距，改变位置 */
+    /* 直接针对这个类名，去掉冗长的父级路径 */
+    .intro-header .subheading {
+        font-size: 30px !important;
+        /* 注意：margin-top 对行内元素 span 有时失效，改用 padding-top 或 display */
+        display: block !important; 
+        padding-top: 50px !important; 
+        margin-top: 0 !important;
     }
 </style>
+
 
 {% for post in paginator.posts %}
 <div class="post-preview">
