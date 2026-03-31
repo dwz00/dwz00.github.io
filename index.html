@@ -8,6 +8,7 @@ description: "「人生就是一场经历 一切都是过客」"
         margin-top: 30px !important;  /* 增加向上间距，改变位置 */
     }
 </style>
+
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
