@@ -1,0 +1,114 @@
+---
+layout:     post
+title:      "如何更好的使用github上的个人博客"
+date:       2026-03-31 12:00:00
+author:     "风神"
+header-img: "img/post-bg-miui6.jpg"
+tags:
+    - 知乎
+    - 产品
+    - UX/UI
+---
+
+> 这篇文章是根据google ai问答写的
+>
+> **clone 你的博客
+---要在本地建立镜像并实时预览调试，你需要搭建一个 Jekyll 环境。因为 Huxpro 主题是基于 Jekyll 的，只有在本地运行起 Jekyll 服务器，你修改的代码（尤其是 CSS 和配置文件）才能即时看到效果。
+以下是保姆级步骤：
+1. 克隆仓库到本地
+打开终端（Windows 用 PowerShell 或 Git Bash，Mac 用 Terminal），输入：
+bash
+git clone https://github.com
+cd dwz00.github.io
+请谨慎使用此类代码。
+
+2. 安装运行环境 (Ruby)
+Jekyll 是用 Ruby 语言写的，所以你需要安装 Ruby：
+Windows: 下载并安装 RubyInstaller（建议选带 Devkit 的版本）。安装后运行 ridk install 完成配置。
+Mac: 自带 Ruby，但建议用 brew install ruby 安装新版本。
+3. 安装依赖组件
+在你的博客文件夹（dwz00.github.io）内执行以下命令，安装 Jekyll 和相关的插件：
+bash
+gem install bundler
+bundle install
+请谨慎使用此类代码。
+
+4. 启动本地预览服务器
+这是最关键的一步，输入：
+bash
+bundle exec jekyll serve
+请谨慎使用此类代码。
+
+成功后：终端会显示 Server address: http://127.0.0.1:4000。
+调试：打开浏览器访问这个地址，你就能看到博客了。现在你修改任何文件并保存，浏览器都会自动刷新显示新效果。
+> **建立本地环境
+对于 Windows 用户，搭建本地 Jekyll 环境最稳妥的方式是使用 RubyInstaller。以下是具体操作流程：
+1. 安装 Ruby 和开发工具 (Devkit)
+Jekyll 是基于 Ruby 语言的，Windows 需要特定的编译工具：
+前往 RubyInstaller 官网。
+下载 Ruby+Devkit 3.3.x (x64)（这是目前最稳定的推荐版本）。
+安装时勾选所有选项（尤其是 Add Ruby executables to your PATH）。
+安装完成后会弹出一个黑色窗口（MSYS2），输入 3 并按回车，安装必要的系统组件。
+安装git 软件
+2. 配置仓库文件夹
+找到你从 GitHub Fork 下来的博客文件夹（通常在 C:\Users\你的名字\Documents\dwz00.github.io）：
+在文件夹空白处右键，选择 "Git Bash Here"（如果你装了 Git）或打开 PowerShell。
+确保你在项目根目录下。
+3. 安装 Jekyll 核心组件
+在终端中依次输入以下命令：
+bash
+# 1. 安装 Bundler（管理插件的工具）
+gem install bundler
+
+# 2. 安装项目所需的所有依赖（会自动读取你文件夹里的 Gemfile）
+bundle install
+请谨慎使用此类代码。
+
+注意：如果 bundle install 报错，通常是因为网络问题，可以尝试换源（可选）：
+gem sources --add https://ruby-china.com --remove https://rubygems.org
+4. 开启本地实时预览
+输入以下命令启动服务器：
+bash
+bundle exec jekyll serve
+请谨慎使用此类代码。
+
+看到这个字样说明成功了：Server address: http://127.0.0
+开始调试：不要关闭这个窗口！打开浏览器访问 http://localhost:4000。
+即时生效：现在你用记事本或 VS Code 修改 index.html 里的字体颜色，保存文件后，刷新网页就能立刻看到变化。
+5. 调试完怎么上传？ (关键点)
+当你觉得本地效果完美了，再把文件“同步”回 GitHub：
+在终端按 Ctrl + C 停止本地服务器。
+输入：
+bash
+git add .
+git commit -m "本地调试完成：优化了复古字体和导航栏"
+git push origin master---
+> **上传更新博客
+> 同步三部曲
+暂存所有修改：
+告诉 Git 你要把刚才改动的所有文件（图片、文章、样式）都打包。
+bash
+git add .
+请谨慎使用此类代码。
+
+提交到本地仓库：
+给这次修改打个“标签”，备注你改了什么（引号里的字可以随便改）。
+bash
+git commit -m "完成复古风装修并发布新文章"
+请谨慎使用此类代码。
+
+推送到 GitHub 线上：
+把本地打包好的内容“发射”到云端。
+bash
+git push origin master
+请谨慎使用此类代码。
+
+(注：如果你的分支叫 main，就用 git push origin main)
+💡 运行后的检查：
+输入账号密码：如果弹出窗口，请输入你的 GitHub 账号和 Token（或者是浏览器授权登录）。
+查看 Actions：回到 GitHub 网页，点击 Actions 选项卡。看到那个绿色的对勾 ✅ 出现后，你的新版博客就正式上线了！
+强制刷新：打开你的域名 dwz00.github.io，按下 Ctrl + F5，就能看到那行金色的复古大标题了。
+⚠️ 常见小问题：
+报错 everything up-to-date：说明你本地还没保存修改，或者已经推送过了。
+报错 rejected：说明线上有你本地没有的内容，先运行 git pull origin master 同步一下再 push。
+

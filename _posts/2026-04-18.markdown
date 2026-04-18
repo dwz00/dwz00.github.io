@@ -1,15 +1,16 @@
+
 ---
-layout:     post
-title:      "你们觉得响应式好呢，还是手机和PC端分开来写？"
-date:       2014-11-20 12:00:00
-author:     "Hux"
-header-img: "img/post-bg-rwd.jpg"
+layout: post
+title: "大钟山公园"
+subtitle: "贺州的夜晚"
+date: 2026-04-18 20:15:55 
+author: "风神"
+header-img: "img/post-bg-default.jpg"
 tags:
-    - 知乎
-    - Web
+  - 标签1
+  - 标签2
 ---
 
-> 这篇文章转载自[我在知乎上的回答](http://www.zhihu.com/question/25836425/answer/31564174)
 
 
 <div>
